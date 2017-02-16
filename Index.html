@@ -1,61 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+
     <meta charset="UTF-8">
-    <title>Crystals Collector</title>
+    <title>Pharaohs Trivia Game</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/jquery-backward-timer.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="assets/javascript/game.js"></script>
-
-
-
   </head>
   <body>
   
-    <!-- Page structure -->
-    <div class="container">
-<div class="Ghead">
-<h2>Crystals Collector Game</h2></div>
-    <div class="row Ginstruct">
-                
-<p>You will be given a random number at the start of the game.</p>         
-<p>Each crystal has a specific hidden value.By clicking on a crystal you will add the crystal's value to your total score. </p>
-<p>You win when you match your score to the random number given at the start of the game. </p>
-<p>the value of each crystal changes at the start of each game </p>
-        </div>
+
+
+
+   <div class="container">
+      
+      <div class="Ghead"> 
+        <h2>Pharaohs Trivia Game</h2> 
+                      </div>
+    <div id="time-left"></div>
+           
   
-  <div class="row Ginstruct">
-      <div class="col-sm-8 random"></div>
-      <div class="col-sm-4 wins">
-      <p id="win"> wins:<span> </span> </p>
-      <p id="loss"> losses: <span> </span> </p>
-      </div>
+<form>  
+  <div><h3>Answer the questions to win</h3>  </div>
+         
+
+
+         <fieldset id="group1">
+              <p>In what continent is egypt located : </p>
+              <div class="radio">
+                <label><input type="radio" name="group1" value="1">Africa</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group1" value="2">Asia</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="group1" value="3">Europe</label>
+              </div>
+          </fieldset>
+  
+
+  
+          <fieldset id="group2">
+              <p>Isis the ancient Egyptian goddess is:</p>
+              <div class="radio">
+                <label><input type="radio" name="group2" value="1">Goddess of motherhood</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group2" value="2">Goddess of the Nile</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group2" value="3">Goddess of reproduction</label>
+              </div>
+          </fieldset>    
+ 
+
+
+          <fieldset id="group3">
+              <p>What is the name of the ancient egyptian cat goddess?</p>
+              <div class="radio">
+                <label><input type="radio" name="group3" value="1">Bastet</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group3" value="2">Ankh</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group3" value="3">Amon</label>
+              </div>
+          </fieldset>    
+ 
+
+          <fieldset id="group4">
+              <p>As per an ancient Egyptian legend, the Nile river was created as a result of: </p>
+              <div class="radio">
+                <label><input type="radio" name="group4" value="1">Isis tears over her husband's death</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group4" value="2">An evil flood from the South</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group4" value="3">Horus ordered workers to dig the Nile</label>
+              </div>
+          </fieldset>    
+  
+          <fieldset id="group5">
+              <p>What is Ankh?</p>
+              <div class="radio">
+                <label><input type="radio" name="group5" value="1">the key of Life representing infinite life</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group5" value="2">the cat Goddess</label>
+              </div>
+
+              <div class="radio">
+                <label><input type="radio" name="group5" value="3">A symbol of happiness in life</label>
+              </div>
+          </fieldset>    
+ <input class="btn btn-default" id="sub" type="submit" value="Submit">
+ 
   </div>
-</div>
-
-<div class="container">
-<div class="row images">
-<img src="assets/images/gem2.png" alt="Gem1" class="imgsize animated bounce" id="c1">
-<img src="assets/images/gem3.png" alt="Gem2" class="imgsize animated bounce" id="c2">
-<img src="assets/images/gem1.png" alt="Gem3" class="imgsize animated bounce" id="c3">
-<img src="assets/images/gem4.png" alt="Gem4" class="imgsize animated bounce" id="c4">
-
-</div>
-</div>
-
-<div class="container">
-  <div class="row txtscore">
-    <p> your total score is:</p>
-  </div>
-
-  <div class="row score"> </div>
-<!--<script type="text/javascript">-->
-
+  
+  </form>
+  
+  </div> 
 
 
  

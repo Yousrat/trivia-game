@@ -5,47 +5,82 @@
  */
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
-  background-color: #666666;
-}
-p {
-  font-size: 20px;
+  background:url("../images/egyptian-bg2.jpg");
+/*background:url("../images/egypt-h-bg3.jpg");*/
 
+
+}
+
+.container{
+ margin-top: 20px;
+ margin-bottom: 20px;
+ 
+ background:url("../images/old-book-trans.png");
+  width: 60%;
+  padding-left: 1ß0px;
+}
+
+p {
+  font-size: 100px;
+  color: white;
+  margin-left: 40px;
+  
 }
 
 
 h2 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-}
-.Ghead {
-background-color: orange;
-  width: 500px;
+  font-weight: 1500;
+  font-size: 50px;
   text-align: center;
-  height: 90px;
-  padding-top: 40px;
+  margin-top: 30px;
+  color: brown;
+}
+h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-size: 28px;
+  text-align: center;
+    color: white;
+
+}
+
+.Ghead {
+  text-align: center;
+  padding-top: 20px;
   margin-bottom: 5px;
   margin-left: -15px;
   margin-top: 5px;
-  font-size: 25px;
+  font-size: 60px;
   font-weight: 1000;
 }
 
 .Ginstruct{
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: white;
-  color: #777777;
-  width: 500px;
+  color: white;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 5px;
+      position: relative;
 
 }
+#sub{
+      position: relative;
+      left: 300px;
+      width: 200px;
+      margin-bottom: 20px;
+}
+.radio{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-left: 50px;
+}
+
 .random{
-    background-color: green;
-    width: 60%;
-    height: 70px;
+    
     float: left;
     display: inline-block;
     margin-bottom: 10px;
@@ -56,7 +91,6 @@ background-color: orange;
 }
 
 .wins{
-      background-color: pink;
       width: 37%;
       height: 70px;
       float: left;
@@ -66,20 +100,8 @@ background-color: orange;
       font-size: 18px;
 }
 
-.images{
-      background-color: black;
-      width: 500px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 60px;
-      
-}
 
-.imgsize{
-      width: 70px;
-      height: 70px;
-      margin-left: 15px;
-}
+
 
 
 

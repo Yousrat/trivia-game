@@ -1,117 +1,90 @@
-// Our array of possible computer choices.
-  var computerChoices = [101,99,172,173,189,155,91,103,204,210];
+// define game as an object
 
-//Our array of possible choices for Crystal1
-var c1Choices = [1,3,5,7,9,11];
-
-//Our array of possible choices for Crystal2
-var c2Choices = [10,20,30,16,23,33];
-
-//Our array of possible choices for Crystal3
-var c3Choices = [13,15,17,19,21];
-
-//Our array of possible choices for Crystal4
-var c4Choices = [25,2,4,6,8,14,12];
-
-//Allow the computer to choose randomly from the predefined array of numbers
-var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]; 
-//Allow each crystal to choose randomly from its predefined array of numbers
-
-var c1Guess = c1Choices[Math.floor(Math.random() * c1Choices.length)]; 
-var c2Guess = c2Choices[Math.floor(Math.random() * c2Choices.length)]; 
-var c3Guess = c3Choices[Math.floor(Math.random() * c3Choices.length)]; 
-var c4Guess = c4Choices[Math.floor(Math.random() * c4Choices.length)]; 
-var wins =0;
-var losses=0;
-var num = 0;
+var correct = 0;
+var wrong = 0;
+var non = 0;
 
 $(document).ready(function(){
+         $('#timer_custom_timeout').backward_timer({
+  			seconds: 30000;
+			})
+         $('#time-left').backward_timer('start')
   
- //render the number chosen by the computer
-$(".random").text(computerGuess);
- //render players score value (Zero)
-$(".score").text(num);
 
-function reset(){
-num =0;
-$(".score").text(num);
- computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
- $(".random").text(computerGuess);
- c1Guess = c1Choices[Math.floor(Math.random() * c1Choices.length)]; 
- c2Guess = c2Choices[Math.floor(Math.random() * c2Choices.length)]; 
- c3Guess = c3Choices[Math.floor(Math.random() * c3Choices.length)]; 
- c4Guess = c4Choices[Math.floor(Math.random() * c4Choices.length)]; 
+        // $("input[type='button']").click(function(){
+//         	setTimeout(timeUp, 30000);
+// function timeUp() {
+// var Time = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]
+     // var Time = 30;
+     // for (j=30; j> -1; j--){
+     // 	$("#time-left").html("<h2>" + j + "</h2>");
+     // 	console.log("done"); 
+     // }
+     //  }
+        	$("#sub").click(function(){
+        	 var radioValue= ['1','2','3'];
+             radioValue[0] = $("input[name=group1]:checked").val();
+             radioValue[1] = $("input[name=group2]:checked").val();
+             radioValue[2] = $("input[name=group3]:checked").val();
+             radioValue[3] = $("input[name=group4]:checked").val();
+             radioValue[4] = $("input[name=group5]:checked").val();
+           
+for(var i=0 ;i< radioValue.length;i++){
+            
+            if(radioValue[i] === '1'){
+            	correct ++;
+                // alert("Your are a - " + radioValue);
+            }
+
+			else if(radioValue[i] === '2' || radioValue[i] === '3'){
+			     wrong ++;
+			                // alert("Your are a - " + radioValue);
+			            }
+			else{
+				 non ++;
+			}
+			
 
 }
 
+alert("correct=" + correct);
+alert("wrong=" + wrong);
+alert("non=" + non);
 
-
-function comparevalues(){
-  if (num === computerGuess){
-      wins++;
-    $("#win span").text(wins);
-    reset();
-  }
-
-  else if (num > computerGuess){
-losses++;
- $("#loss span").text(losses);
-  reset();
-  }
- 
-}
-
-
-function animationHover(element, animation){
-    element = $(element);
-    element.hover(
-        function() {
-            element.addClass('animated ' + animation);        
-        },
-        function(){
-            //wait for animation to finish before removing classes
-            window.setTimeout( function(){
-                element.removeClass('animated ' + animation);
-            }, 2000);         
         });
-}
-
-animationHover('#c1', 'pulse');
-animationHover('#c2', 'pulse');
-animationHover('#c3', 'pulse');
-animationHover('#c4', 'pulse');
-
-    $('#c1').on('click',function(){
-      num = num + c1Guess;
-      $(".score").text(num);
-      comparevalues();
+        
     });
 
-    $('#c2').on('click',function(){
-    num = num + c2Guess;
-    $(".score").text(num);
-          comparevalues();
-       
-     });
+// $(function() {$("#sub").click(function() {
+    // var x = name.group1.val();
+    // console.log(x);
 
-    $('#c3').on('click',function(){
-    num = num + c3Guess;
-    $(".score").text(num); 
-          comparevalues();
-       
-    });
-
-    $('#c4').on('click',function(){
-    num = num + c4Guess;
-    $(".score").text(num); 
-          comparevalues();
-       
-    });
-
+    // alert($('input[name=group1]:checked').val());
+    // alert($('input[name=group2]:checked').val());
+    // alert($('input[name=group3]:checked').val());
+    // alert($('input[name=group4]:checked').val());
+    // alert($('input[name=group5]:checked').val());
+  
  
 
 
+  // });
 
-});
+
+// });
+
+
+
+
+// $.mobile.changePage("done.html");
+// $.mobile.changePage("done.html","slideup");
+ 
+
+ //window.location.href = "done.html" + try;
+ //$("#non").text(try);
+
+  
+
+
 
 
