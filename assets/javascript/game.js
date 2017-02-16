@@ -5,10 +5,10 @@ var wrong = 0;
 var non = 0;
 
 $(document).ready(function(){
-         $('#timer_custom_timeout').backward_timer({
-  			seconds: 30000;
-			})
-         $('#time-left').backward_timer('start')
+         // $('#timer_custom_timeout').backward_timer({
+  	// 		seconds: 30000;
+			// })
+   //       $('#time-left').backward_timer('start')
   
 
         // $("input[type='button']").click(function(){
