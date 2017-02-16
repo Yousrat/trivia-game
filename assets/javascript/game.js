@@ -21,6 +21,37 @@ $(document).ready(function(){
      // 	console.log("done"); 
      // }
      //  }
+
+
+
+     var game = {
+  count: 30,
+  
+  timer: function () {
+    if(this.count > -1) {
+      //console.log(game.count);
+      $('#time-left').html("Time left in Seconds: " + game.count);
+      this.count--;
+    } else {
+      clearInterval(this.counter);
+      $("#sub").click();
+    }
+  },
+  counter: function() {
+    
+    //we return the setInterval object to be found to this.counter
+    return setInterval(function() {
+      
+      //since "this" is pointing to window, we have to pass the object's name
+      game.timer();
+      
+    }, 1000);
+  }
+};
+
+game.counter();
+
+
         	$("#sub").click(function(){
         	 var radioValue= ['1','2','3'];
              radioValue[0] = $("input[name=group1]:checked").val();
@@ -47,9 +78,9 @@ for(var i=0 ;i< radioValue.length;i++){
 
 }
 
-alert("correct=" + correct);
-alert("wrong=" + wrong);
-alert("non=" + non);
+alert("Number of correct answers=" + correct);
+alert("Number OF wrong answers=" + wrong);
+alert("Number of unselected=" + non);
 
         });
         
